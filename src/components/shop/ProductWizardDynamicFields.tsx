@@ -622,7 +622,7 @@ function KitFields({
 
           {linhas.length > 0 ? (
             <div className="rounded-xl border border-border/50 bg-background/10 p-3 space-y-2.5">
-              <p className="text-xs font-semibold text-primary">Kit contem:</p>
+              <p className="text-xs font-semibold text-primary">Kit contém:</p>
               {linhas.map((row, idx) => (
                 <div key={`${row.shopProductId ?? row.nome}-${idx}`} className="rounded-lg border border-border/50 bg-background/15 p-2.5 flex items-center gap-2.5">
                   <div className="w-10 h-10 rounded-md overflow-hidden border border-border/40 shrink-0 bg-muted/20">

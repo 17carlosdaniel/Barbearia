@@ -187,7 +187,7 @@ const BarberClientProfile = () => {
         {loading ? (
           <div className="glass-card rounded-xl p-5 text-sm text-muted-foreground">Carregando perfil do cliente...</div>
         ) : !customer ? (
-          <div className="glass-card rounded-xl p-5 text-sm text-muted-foreground">Cliente nao encontrado para este historico.</div>
+          <div className="glass-card rounded-xl p-5 text-sm text-muted-foreground">Cliente não encontrado para este histórico.</div>
         ) : (
           <>
             <motion.div
@@ -203,7 +203,7 @@ const BarberClientProfile = () => {
                   </div>
                   <div>
                     <h1 className="text-2xl font-display font-bold text-foreground">{customer.clientName}</h1>
-                    <p className="text-sm text-muted-foreground">{customer.customerPhone || "Telefone nao informado"}</p>
+                    <p className="text-sm text-muted-foreground">{customer.customerPhone || "Telefone não informado"}</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -238,7 +238,7 @@ const BarberClientProfile = () => {
                   <p className="text-xl font-semibold">{formatCurrency(customer.avgTicket)}</p>
                 </div>
                 <div className="rounded-lg border border-border/50 p-3">
-                  <p className="text-xs text-muted-foreground">Ultimo servico</p>
+                  <p className="text-xs text-muted-foreground">Último serviço</p>
                   <p className="text-sm font-semibold">{customer.lastService}</p>
                 </div>
                 <div className="rounded-lg border border-border/50 p-3">
@@ -272,7 +272,7 @@ const BarberClientProfile = () => {
               </div>
               {staleAlert ? (
                 <div className="mt-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-amber-200">
-                  Cliente nao retorna ha {daysSinceLastVisit} dias. Acao sugerida: enviar convite para novo corte.
+                  Cliente não retorna há {daysSinceLastVisit} dias. Ação sugerida: enviar convite para novo corte.
                 </div>
               ) : null}
             </motion.div>
@@ -287,7 +287,7 @@ const BarberClientProfile = () => {
               <label className="mt-3 block text-xs text-muted-foreground">Preferencias de atendimento</label>
               <textarea
                 className="mt-3 min-h-24 w-full rounded-md border border-border bg-background p-3 text-sm"
-                placeholder="- gosta de degrade baixo&#10;- nao usa navalha"
+                placeholder="- gosta de degradê baixo&#10;- não usa navalha"
                 value={preferences}
                 onChange={(event) => setPreferences(event.target.value)}
               />

@@ -188,7 +188,7 @@ const BarberFinanceAnalyses = () => {
                 variant="outline"
                 size="sm"
                 onClick={() => {
-                  const headers = ["Cliente", "Barbeiro", "Servico", "Metodo", "Valor", "Comissao", "Data", "Status"];
+                  const headers = ["Cliente", "Barbeiro", "Serviço", "Método", "Valor", "Comissão", "Data", "Status"];
                   const rows = filtered.map((t) => [t.client, t.barber, t.service, t.method, t.amount, t.commission, t.date, t.status]);
                   const csv = [headers, ...rows].map((r) => r.join(";")).join("\n");
                   const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });

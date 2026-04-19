@@ -78,7 +78,7 @@ const ForgotPassword = () => {
 
     const validated = validatePassword(newPassword);
     if (!validated.valid) {
-      toast({ title: "Senha invalida", description: validated.error, variant: "destructive" });
+      toast({ title: "Senha inválida", description: validated.error, variant: "destructive" });
       return;
     }
 
@@ -86,13 +86,13 @@ const ForgotPassword = () => {
     try {
       const { error } = await supabase.auth.updateUser({ password: newPassword });
       if (error) {
-        toast({ title: "Nao foi possivel alterar", description: error.message, variant: "destructive" });
+        toast({ title: "Não foi possível alterar", description: error.message, variant: "destructive" });
         return;
       }
       setNewPassword("");
       setConfirmPassword("");
       setIsRecoveryMode(false);
-      toast({ title: "Senha redefinida", description: "Voce ja pode entrar com sua nova senha." });
+      toast({ title: "Senha redefinida", description: "Você já pode entrar com sua nova senha." });
       await supabase.auth.signOut();
     } finally {
       setIsSubmitting(false);

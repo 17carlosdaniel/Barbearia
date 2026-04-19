@@ -204,7 +204,7 @@ const BarberCustomers = () => {
               <Input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Buscar por nome, telefone ou servico preferido..."
+                placeholder="Buscar por nome, telefone ou serviço preferido..."
                 className="pl-9"
               />
             </div>
@@ -236,7 +236,7 @@ const BarberCustomers = () => {
                   <div className="min-w-0">
                     <p className="font-medium text-foreground truncate">{customer.clientName}</p>
                     <p className="text-xs text-muted-foreground mt-0.5">
-                      {customer.preferredService || "Servico favorito nao identificado"} • {customer.visits} visitas • Ticket medio R$ {customer.avgTicket.toFixed(0)}
+                      {customer.preferredService || "Serviço favorito não identificado"} • {customer.visits} visitas • Ticket médio R$ {customer.avgTicket.toFixed(0)}
                     </p>
                     <p className="text-[11px] text-muted-foreground mt-0.5">
                       Ultima visita ha {customer.daysSinceLastVisit} dias

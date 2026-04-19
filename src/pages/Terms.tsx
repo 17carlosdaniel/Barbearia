@@ -5,54 +5,54 @@ import { useAuth } from "@/contexts/AuthContext";
 
 const sections = [
   {
-    title: "1. Introducao",
+    title: "1. Introdução",
     icon: FileText,
-    text: "Bem-vindo ao BarberFlow. Ao acessar ou usar nossa plataforma, voce concorda com estes Termos de Uso.",
+    text: "Bem-vindo ao BarberFlow. Ao acessar ou usar nossa plataforma, você concorda com estes Termos de Uso.",
   },
   {
-    title: "2. Conta do usuario",
+    title: "2. Conta do usuário",
     icon: ShieldCheck,
-    text: "Cada usuario e responsavel por manter a seguranca da conta, senha e dados de acesso.",
+    text: "Cada usuário é responsável por manter a segurança da conta, senha e dados de acesso.",
   },
   {
     title: "3. Uso da plataforma",
     icon: FileText,
-    text: "O BarberFlow permite agendamento de servicos, compra de produtos e gestao de barbearias em ambiente digital.",
+    text: "O BarberFlow permite agendamento de serviços, compra de produtos e gestão de barbearias em ambiente digital.",
   },
   {
     title: "4. Pagamentos",
     icon: CreditCard,
-    text: "Pagamentos sao processados por meios seguros. O BarberFlow nao armazena dados completos de cartao.",
+    text: "Pagamentos são processados por meios seguros. O BarberFlow não armazena dados completos de cartão.",
   },
   {
     title: "5. Cancelamentos",
     icon: RefreshCcw,
-    text: "O usuario pode cancelar agendamentos conforme as regras definidas por cada barbearia.",
+    text: "O usuário pode cancelar agendamentos conforme as regras definidas por cada barbearia.",
   },
   {
     title: "6. Produtos e marketplace",
     icon: ShoppingBag,
-    text: "Produtos sao ofertados por barbearias parceiras, que sao responsaveis por qualidade, disponibilidade e entrega.",
+    text: "Produtos são ofertados por barbearias parceiras, que são responsáveis por qualidade, disponibilidade e entrega.",
   },
   {
     title: "7. Responsabilidades",
     icon: ShieldCheck,
-    text: "O BarberFlow atua como intermediador digital e nao se responsabiliza por falhas de execucao dos servicos prestados por terceiros.",
+    text: "O BarberFlow atua como intermediador digital e não se responsabiliza por falhas de execução dos serviços prestados por terceiros.",
   },
   {
     title: "8. Uso indevido",
     icon: Ban,
-    text: "E proibido usar a plataforma para atividades ilegais, fraudulentas ou que violem direitos de terceiros.",
+    text: "É proibido usar a plataforma para atividades ilegais, fraudulentas ou que violem direitos de terceiros.",
   },
   {
-    title: "9. Alteracoes",
+    title: "9. Alterações",
     icon: RefreshCcw,
-    text: "Estes termos podem ser atualizados a qualquer momento. A versao vigente ficara disponivel nesta pagina.",
+    text: "Estes termos podem ser atualizados a qualquer momento. A versão vigente ficará disponível nesta página.",
   },
   {
     title: "10. Contato",
     icon: Phone,
-    text: "Para duvidas, fale com nosso suporte: suporte@barberflow.com.br.",
+    text: "Para dúvidas, fale com nosso suporte: suporte@barberflow.com.br.",
   },
 ];
 

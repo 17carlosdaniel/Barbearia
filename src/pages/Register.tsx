@@ -685,7 +685,7 @@ const Register = () => {
               <>
                 {userType === "barbeiro" && (
                   <p className="text-xs font-medium text-[hsl(var(--gold))]">
-                    Etapa {barberDataStep} de 3 - Dados basicos
+                    Etapa {barberDataStep} de 3 - Dados básicos
                   </p>
                 )}
                 <div className="space-y-2.5">
@@ -815,7 +815,7 @@ const Register = () => {
                     className="bg-secondary border-border h-11 rounded-lg text-sm focus-visible:ring-[hsl(var(--gold))]/50"
                     required
                   />
-                  <p className="text-xs text-muted-foreground">Informe o CEP para preenchimento automatico quando disponivel.</p>
+                  <p className="text-xs text-muted-foreground">Informe o CEP para preenchimento automático quando disponível.</p>
                 </div>
 
                 <div className="space-y-2.5">
@@ -837,7 +837,7 @@ const Register = () => {
                   <div className="relative">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input
-                      placeholder="Rua, numero, bairro"
+                      placeholder="Rua, número, bairro"
                       value={endereco}
                       onChange={(e) => setEndereco(e.target.value)}
                       className="pl-10 bg-secondary border-border h-11 rounded-lg text-sm focus-visible:ring-[hsl(var(--gold))]/50"
@@ -1019,7 +1019,7 @@ const Register = () => {
                       <p className="text-sm font-semibold text-foreground">Pagamento</p>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      Ambiente de demonstracao. Nao informe dados reais de cartao.
+                      Ambiente de demonstração. Não informe dados reais de cartão.
                     </p>
 
                     <div className="grid grid-cols-2 gap-2">
@@ -1167,7 +1167,7 @@ const Register = () => {
                       <ShieldCheck className="w-4 h-4 text-[hsl(var(--gold))] mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-foreground font-medium">Pagamento seguro</p>
-                        <p className="text-xs text-muted-foreground">Versao de teste sem criptografia de pagamento em producao.</p>
+                        <p className="text-xs text-muted-foreground">Versão de teste sem criptografia de pagamento em produção.</p>
                       </div>
                     </div>
               </motion.div>

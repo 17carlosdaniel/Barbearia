@@ -159,25 +159,25 @@ const BarberProfile = () => {
 
   const requestNotificationsPermission = async () => {
     if (!("Notification" in window)) {
-      toast({ title: "Navegador sem suporte", description: "Notificacoes nao sao suportadas neste navegador.", variant: "destructive" });
+      toast({ title: "Navegador sem suporte", description: "Notificações não são suportadas neste navegador.", variant: "destructive" });
       return;
     }
     const result = await Notification.requestPermission();
     setNotificationPermission(result);
-    toast({ title: result === "granted" ? "Notificacoes ativadas" : "Permissao de notificacoes negada" });
+    toast({ title: result === "granted" ? "Notificações ativadas" : "Permissão de notificações negada" });
   };
 
   const requestLocationPermission = () => {
     if (!("geolocation" in navigator)) {
-      toast({ title: "Navegador sem suporte", description: "Geolocalizacao nao e suportada neste navegador.", variant: "destructive" });
+      toast({ title: "Navegador sem suporte", description: "Geolocalização não é suportada neste navegador.", variant: "destructive" });
       return;
     }
     const host = window.location.hostname;
     const isLocalHost = host === "localhost" || host === "127.0.0.1";
     if (!window.isSecureContext && !isLocalHost) {
       toast({
-        title: "Ative HTTPS para localizacao",
-        description: "O navegador so permite localizacao em HTTPS ou localhost.",
+        title: "Ative HTTPS para localização",
+        description: "O navegador só permite localização em HTTPS ou localhost.",
         variant: "destructive",
       });
       return;
@@ -185,21 +185,21 @@ const BarberProfile = () => {
     navigator.geolocation.getCurrentPosition(
       () => {
         setLocationPermission("granted");
-        toast({ title: "Localizacao ativada" });
+        toast({ title: "Localização ativada" });
       },
       (error) => {
         if (error.code === 1) {
           setLocationPermission("denied");
           toast({
-            title: "Permissao bloqueada",
-            description: "Libere a localizacao nas configuracoes do site (icone de cadeado na barra de endereco).",
+            title: "Permissão bloqueada",
+            description: "Libere a localização nas configurações do site (ícone de cadeado na barra de endereço).",
             variant: "destructive",
           });
           return;
         }
         toast({
-          title: "Nao foi possivel obter localizacao",
-          description: "Verifique GPS/conexao e tente novamente.",
+          title: "Não foi possível obter localização",
+          description: "Verifique GPS/conexão e tente novamente.",
           variant: "destructive",
         });
       },
