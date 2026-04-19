@@ -494,13 +494,15 @@ const Register = () => {
           </div>
         )}
         {user && <div className="mb-4 border-t border-border" />}
-        <div className="flex items-center justify-between mb-10">
+
+        {/* Topo: voltar + marca */}
+        <div className="flex items-center justify-between mb-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-2 min-h-[48px]"
+            className="inline-flex items-center gap-1.5 text-xs text-muted-foreground/70 hover:text-primary transition-colors py-2 min-h-[48px] tracking-wide"
           >
-            <ArrowLeft className="w-4 h-4 shrink-0" />
-            Voltar ao início
+            <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
+            {isVintage ? "Retornar à casa" : "Voltar ao início"}
           </Link>
           <div className="flex items-center gap-2">
             <span className={cn("text-2xl font-bold text-gradient-gold", isVintage ? "font-vintage-heading" : "font-display")}>
@@ -510,17 +512,31 @@ const Register = () => {
           </div>
         </div>
 
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: "easeOut" }}>
-          <h1
-            className={cn(
-              "text-2xl font-bold leading-tight text-foreground sm:text-3xl",
-              isVintage ? "font-vintage-heading" : "font-display",
-            )}
-          >
-            Cadastre-se:
-          </h1>
-          <p className="text-muted-foreground text-sm sm:text-base mt-2 mb-5">
-          </p>
+        {/* Headline de entrada */}
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: "easeOut" }} className="mb-6">
+          {isVintage ? (
+            <>
+              <p className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-3 flex items-center gap-2">
+                <span className="w-6 h-px bg-primary/40" />
+                Início de jornada
+              </p>
+              <h1 className={cn("text-2xl sm:text-3xl font-bold leading-tight text-foreground font-vintage-heading")}>
+                Abra sua casa no BarberFlow
+              </h1>
+              <p className="text-muted-foreground/70 text-sm mt-2 font-display italic leading-relaxed">
+                Crie sua conta e prepare a casa para agenda, equipe e movimento.
+              </p>
+            </>
+          ) : (
+            <>
+              <h1 className={cn("text-2xl sm:text-3xl font-bold leading-tight text-foreground font-display")}>
+                Criar conta
+              </h1>
+              <p className="text-muted-foreground text-sm mt-1.5 leading-relaxed">
+                Cadastre sua barbearia e organize sua operação em poucos passos.
+              </p>
+            </>
+          )}
         </motion.div>
 
         {/* Alternativa: criar conta como cliente com Google (demo) */}

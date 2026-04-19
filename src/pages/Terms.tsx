@@ -74,15 +74,15 @@ const Terms = () => {
         <div className="glass-card rounded-xl p-6 md:p-8 border border-primary/20">
           <h1 className="text-2xl md:text-3xl font-display font-bold text-foreground">Termos de Uso</h1>
           <p className="text-sm text-muted-foreground mt-2">
-            Ultima atualizacao: 20 de Marco de 2026
+            Última atualização: 20 de Março de 2026
           </p>
           <p className="text-sm text-muted-foreground mt-3">
-            Este resumo ajuda voce a entender os pontos principais antes da leitura completa.
+            Este resumo ajuda você a entender os pontos principais antes da leitura completa.
           </p>
           <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-muted-foreground">
-            <li>Voce pode agendar e comprar produtos na plataforma.</li>
-            <li>Seus dados sao protegidos com boas praticas de seguranca.</li>
-            <li>Pagamentos sao processados por meios seguros.</li>
+            <li>Você pode agendar e comprar produtos na plataforma.</li>
+            <li>Seus dados são protegidos com boas práticas de segurança.</li>
+            <li>Pagamentos são processados por meios seguros.</li>
             <li>Cancelamentos seguem regras da barbearia escolhida.</li>
           </ul>
         </div>

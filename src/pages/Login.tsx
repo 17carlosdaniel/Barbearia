@@ -370,15 +370,12 @@ const Login = () => {
               <Scissors className="w-5 h-5 text-primary transform -rotate-45 transition-all duration-500 opacity-0 group-hover:opacity-100" />
             </div>
           </div>
-          <p className="text-xs text-muted-foreground inline-flex items-center gap-1.5">
-            <ShieldCheck className="w-3.5 h-3.5 text-primary shrink-0" />
-            Seus dados protegidos em uma conexão segura
-          </p>
+
         </motion.form>
 
-        <p className="mt-6 text-sm text-muted-foreground">
-          Ainda não usa o BarberFlow?{" "}
-          <Link to="/cadastro" className="text-primary font-medium hover:underline">
+        <p className="mt-6 text-sm text-center w-full font-medium">
+          <span className="text-white">Ainda não usa o BarberFlow?</span>{" "}
+          <Link to="/cadastro" className="text-gradient-gold font-semibold hover:underline">
             Crie sua conta
           </Link>
         </p>

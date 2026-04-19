@@ -31,7 +31,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useTheme } from "@/contexts/ThemeContext";
 
 type FaqItem = {
-  category: "Agendamentos" | "Pagamentos" | "Servicos" | "Conta";
+  category: "Agendamentos" | "Pagamentos" | "Serviços" | "Conta";
   q: string;
   a: string;
 };
@@ -40,32 +40,32 @@ const faqs: FaqItem[] = [
   {
     category: "Agendamentos",
     q: "Como agendar um corte?",
-    a: "Acesse a busca de barbearias, escolha a barbearia e o servico. Depois confirme data e horario.",
+    a: "Acesse a busca de barbearias, escolha a barbearia e o serviço. Depois confirme data e horário.",
   },
   {
     category: "Agendamentos",
     q: "Como cancelar um agendamento?",
-    a: "Acesse a area de agendamentos e selecione o atendimento para cancelar ou reagendar.",
+    a: "Acesse a área de agendamentos e selecione o atendimento para cancelar ou reagendar.",
   },
   {
     category: "Pagamentos",
-    q: "Quais formas de pagamento sao aceitas?",
-    a: "Voce pode pagar com PIX, cartao e boleto, conforme disponibilidade do fluxo em cada tela.",
+    q: "Quais formas de pagamento são aceitas?",
+    a: "Você pode pagar com PIX, cartão e boleto, conforme disponibilidade do fluxo em cada tela.",
   },
   {
     category: "Pagamentos",
-    q: "Como vejo meus pagamentos e cobrancas?",
-    a: "Use o atalho de pagamentos para abrir sua area financeira ou historico de pedidos.",
+    q: "Como vejo meus pagamentos e cobranças?",
+    a: "Use o atalho de pagamentos para abrir sua área financeira ou histórico de pedidos.",
   },
   {
-    category: "Servicos",
-    q: "Nao aparece horario disponivel. O que fazer?",
-    a: "Tente outro profissional, altere a data/periodo e confira se a barbearia possui slots ativos.",
+    category: "Serviços",
+    q: "Não aparece horário disponível. O que fazer?",
+    a: "Tente outro profissional, altere a data/período e confira se a barbearia possui slots ativos.",
   },
   {
     category: "Conta",
     q: "Como alterar meus dados de conta?",
-    a: "Acesse seu perfil para atualizar telefone, e-mail e demais informacoes da conta.",
+    a: "Acesse seu perfil para atualizar telefone, e-mail e demais informações da conta.",
   },
 ];
 
@@ -126,7 +126,7 @@ const Support = () => {
   }, [search]);
 
   const groupedFaqs = useMemo(() => {
-    const categories: FaqItem["category"][] = ["Agendamentos", "Pagamentos", "Servicos", "Conta"];
+    const categories: FaqItem["category"][] = ["Agendamentos", "Pagamentos", "Serviços", "Conta"];
     return categories
       .map((category) => ({
         category,
@@ -136,8 +136,8 @@ const Support = () => {
   }, [filteredFaqs]);
 
   const commonIssues = [
-    "Nao consigo pagar",
-    "Nao aparece horario",
+    "Não consigo pagar",
+    "Não aparece horário",
     "Erro no app",
   ];
 
@@ -163,8 +163,8 @@ const Support = () => {
     }
     // Simulação: em produção enviaria para API / abriria ticket
     toast({
-      title: "Solicitacao enviada",
-      description: "Seu ticket foi registrado. Normalmente respondemos em minutos e no maximo em 24h.",
+      title: "Solicitação enviada",
+      description: "Seu ticket foi registrado. Normalmente respondemos em minutos e no máximo em 24h.",
     });
     setProblemType("agendamento");
     setAssunto("");

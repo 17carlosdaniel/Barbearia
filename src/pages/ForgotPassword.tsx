@@ -54,14 +54,14 @@ const ForgotPassword = () => {
         redirectTo: `${window.location.origin}/esqueci-senha`,
       });
       if (error) {
-        toast({ title: "Nao foi possivel enviar", description: error.message, variant: "destructive" });
+        toast({ title: "Não foi possível enviar", description: error.message, variant: "destructive" });
         return;
       }
       setEmail(safeEmail);
       setSent(true);
       toast({
         title: "Verifique seu e-mail",
-        description: "Se existir uma conta com este e-mail, voce recebera as instrucoes para redefinir a senha.",
+        description: "Se existir uma conta com este e-mail, você receberá as instruções para redefinir a senha.",
       });
     } finally {
       setIsSubmitting(false);
@@ -72,7 +72,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     if (isSubmitting) return;
     if (newPassword !== confirmPassword) {
-      toast({ title: "Senhas diferentes", description: "A nova senha e a confirmacao nao coincidem.", variant: "destructive" });
+      toast({ title: "Senhas diferentes", description: "A nova senha e a confirmação não coincidem.", variant: "destructive" });
       return;
     }
 
